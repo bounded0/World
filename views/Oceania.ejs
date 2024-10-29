@@ -1,1 +1,27 @@
-<h1><%= countryNames %></h1>
+<link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <header>
+        <a href="/" class="back-button">Back to Continents</a>
+
+    </header>
+    
+    <main class="country-list">
+        <h1>Countries in Oceania</h1>
+        <ul>
+            <% if (countryNames) { %>
+                <% countryNames.forEach(country => { %>
+                    <li><h3><%= country.name %></h3>
+                        <p><%= country.capital %></p>
+                        <img src="<%= country.flag %>" alt="<%= country.name %> Flag" class="flag">                    </li>
+
+                <% }) %>
+            <% } else { %>
+                <li>No countries found in Africa.</li>
+            <% } %>
+        </ul>
+    </main>
+
+    <footer>
+        <a href="/" class="back-button">Back to Continents</a>
+    </footer>

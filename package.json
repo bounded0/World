@@ -1,4 +1,9 @@
 {
+  
+    "scripts": {
+      "build": "[my-framework] build --output public"
+    },
+  
   "type": "module",
   "dependencies": {
     "axios": "^1.7.7",
